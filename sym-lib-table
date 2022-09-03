@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "LCM-S01602DTR_A")(type "Legacy")(uri "${KIPRJMOD}/Lib/LCM-S01602DTR_A.lib")(options "")(descr ""))
+  (lib (name "EG8010")(type "KiCad")(uri "${KIPRJMOD}/Lib/EG8010.kicad_sym")(options "")(descr ""))
+)
