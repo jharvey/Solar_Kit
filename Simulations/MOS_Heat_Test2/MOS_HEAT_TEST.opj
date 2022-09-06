@@ -1,0 +1,159 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2022 S008-[09/05/22]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    ("Allegro Netlist Directory" "allegro")
+    (File ".\mos_heat_test.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\mos_heat_test-pspicefiles\testbench\testbench.net"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\mos_heat_test-pspicefiles\testbench\trans.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\mos_heat_test-pspicefiles\testbench\trans.sim"
+        (DisplayName "Testbench-trans")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 571"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 24 5 1354 24 589")
+        (Scroll "0 63")
+        (Zoom "208")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\MYPC\DESKTOP\SOLAR_KIT\SIMULATIONS\MOS_HEAT_TEST2\MOS_HEAT_TEST.DSN")
+      (Schematic "Testbench")
+      (Page "PAGE1")))
+  (MPSSessionName "MyPC")
+  (PartMRUSelector
+    (DAC8break
+      (FullPartName "DAC8break.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (Dbreak
+      (FullPartName "Dbreak.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (VSFFM
+      (FullPartName "VSFFM.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (E
+      (FullPartName "E.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (Lbreak
+      (FullPartName "Lbreak.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (CSD19505KCS
+      (FullPartName "CSD19505KCS.Normal")
+      (LibraryName "C:\CDS_SPB_HOME\CDSSETUP\PSPTILIBDIR\CSD19505KCS.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (csd17507q5a
+      (FullPartName "csd17507q5a.Normal")
+      (LibraryName "C:\CDS_SPB_HOME\CDSSETUP\PSPTILIBDIR\CSD17507Q5A.OLB")
+      (DeviceIndex "0"))
+    (csd17510q5a
+      (FullPartName "csd17510q5a.Normal")
+      (LibraryName "C:\CDS_SPB_HOME\CDSSETUP\PSPTILIBDIR\CSD17510Q5A.OLB")
+      (DeviceIndex "0"))
+    (CSD19506KCS
+      (FullPartName "CSD19506KCS.Normal")
+      (LibraryName "C:\CDS_SPB_HOME\CDSSETUP\PSPTILIBDIR\CSD19506KCS.OLB")
+      (DeviceIndex "0"))
+    (CSD19505KTT
+      (FullPartName "CSD19505KTT.Normal")
+      (LibraryName "C:\CDS_SPB_HOME\CDSSETUP\PSPTILIBDIR\CSD19505KTT.OLB")
+      (DeviceIndex "0"))
+    (CSD19503KCS
+      (FullPartName "CSD19503KCS.Normal")
+      (LibraryName "C:\CDS_SPB_HOME\CDSSETUP\PSPTILIBDIR\CSD19503KCS.OLB")
+      (DeviceIndex "0"))
+    (CSD19502Q5B
+      (FullPartName "CSD19502Q5B.Normal")
+      (LibraryName "C:\CDS_SPB_HOME\CDSSETUP\PSPTILIBDIR\CSD19502Q5B.OLB")
+      (DeviceIndex "0"))
+    (CSD19501KCS
+      (FullPartName "CSD19501KCS.Normal")
+      (LibraryName "C:\CDS_SPB_HOME\CDSSETUP\PSPTILIBDIR\CSD19501KCS.OLB")
+      (DeviceIndex "0"))
+    (power_Mbreakn
+      (FullPartName "power_Mbreakn.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN3
+      (FullPartName "MbreakN3.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN4
+      (FullPartName "MbreakN4.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))))

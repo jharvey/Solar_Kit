@@ -1,0 +1,65 @@
+
+**** 09/05/22 21:29:02 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Testbench-trans"  [ c:\users\mypc\desktop\solar_kit\simulations\mos_heat_test2\mos_heat_test-pspicefiles\testbench\tran
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 25us 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Testbench.net" 
+
+
+
+**** INCLUDING Testbench.net ****
+* source MOS_HEAT_TEST
+C_CloadHO         0 HO  0.1u  
+V_V2         LI 0 DC 0 AC 1
++PULSE 0 12 1n 2.5n 2.5n 10u 25u
+C_CloadLO         0 LO  0.1u  
+V_V1         HB 0 12
+X_U1         HB HB HO 0 HI LI 0 LO UCC27200
+V_V3         HI 0 DC 1 AC 1
++PULSE 12 0 1n 2.5n 2.5n 10u 25u
+V_V4         N141181360 0 12
+R_R2         0 N14121173  1.2 TC=0,0 
+X_X1         N14118578 LO 0 CSD17510Q5A
+X_X2         N14123709 N14120677 N14118578 CSD17507Q5A
+L_L1         N14123204 N14121173  64uH  
+C_C1         0 N141211981  470u  TC=0,0 
+R_R3         N141211981 N14121173  1u TC=0,0 
+R_R4         N14123204 N14118578  1u TC=0,0 
+R_R5         N14123709 N141181360  1u TC=0,0 
+R_R6         N14120677 HO  100 TC=0,0 
+D_D1         N14120677 HO Dbreak 
+R_R7         0 N14120677  100k TC=0,0 
+R_R8         N14124626 N14124622  100 TC=0,0 
+D_D2         N14124626 N14124622 Dbreak 
+
+**** RESUMING trans.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N14124626 is floating
+
+ERROR(ORPSIM-15142): Node N14124622 is floating
+

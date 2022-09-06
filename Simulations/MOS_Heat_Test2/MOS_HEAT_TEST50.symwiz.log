@@ -1,0 +1,7 @@
+STATUS: PSpice Model Import Wizard for "Capture" (17.4.0.d001)
+STATUS:  
+   INFO: OLB driven flow
+   INFO: Input File: C:\USERS\MYPC\DESKTOP\SOLAR_KIT\SIMULATIONS\MOS_HEAT_TEST2\MOS_HEAT_TEST50.olb
+   INFO: Symbol Name: CSD19505KCS_0
+  ERROR: Symbol "CSD19505KCS_0" not found in symbol library "C:\USERS\MYPC\DESKTOP\SOLAR_KIT\SIMULATIONS\MOS_HEAT_TEST2\MOS_HEAT_TEST50.olb".
+STATUS: 1 Error messages, 0 Warning messages

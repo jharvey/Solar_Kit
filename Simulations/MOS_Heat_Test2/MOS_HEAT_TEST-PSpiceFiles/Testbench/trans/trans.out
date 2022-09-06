@@ -1,0 +1,319 @@
+
+**** 09/05/22 23:06:25 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Testbench-trans"  [ c:\users\mypc\desktop\solar_kit\simulations\mos_heat_test2\mos_heat_test-pspicefiles\testbench\tran
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 40us 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Testbench.net" 
+
+
+
+**** INCLUDING Testbench.net ****
+* source MOS_HEAT_TEST
+C_CloadHO         0 HO  0.1u  
+V_V2         LI 0 DC 0 AC 1
++PULSE 0 12 1n 2.5n 2.5n 10u 25u
+C_CloadLO         0 LO  0.1u  
+V_V1         HB 0 24
+X_U1         HB HB HO 0 HI LI 0 LO UCC27200
+V_V3         HI 0 DC 0 AC 0
++PULSE 12 0 1n 2.5n 2.5n 10u 25u
+V_V4         N141181360 0 12
+R_R2         0 VOUT  .4 TC=0,0 
+X_X1         VMID VLO-G 0 CSD17510Q5A
+X_X2         VMOS VHI-G VMID CSD17507Q5A
+L_L1         N14123204 VOUT  64uH  
+C_C1         0 N141211981  470u  TC=0,0 
+R_R3         N141211981 VOUT  1u TC=0,0 
+R_R4         N14123204 VMID  1u TC=0,0 
+R_R5         VMOS N141181360  1u TC=0,0 
+R_R6         VHI-G HO  100 TC=0,0 
+D_D1         VHI-G HO Dbreak 
+R_R7         0 VHI-G  100k TC=0,0 
+R_R8         VLO-G LO  100 TC=0,0 
+D_D2         VLO-G LO Dbreak 
+R_R9         0 VLO-G  100k TC=0,0 
+C_C2         VMID HB  10u  TC=0,0 
+
+**** RESUMING trans.cir ****
+.END
+
+INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
+
+INFO(ORPSIM-15453): Model X_X2.NMOS: Using BSIM VERSION 3.2
+
+**** 09/05/22 23:06:25 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Testbench-trans"  [ c:\users\mypc\desktop\solar_kit\simulations\mos_heat_test2\mos_heat_test-pspicefiles\testbench\tran
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.DBD        X_X1.DDx        X_X1.DD         X_X2.DBD        
+  T_Measured   27              27              27              27            
+   T_Current   27              27              27              27            
+          IS    2.900000E-12    1.000000E-12  100.000000E-15    1.100000E-12 
+           N    1.01                                            1.01         
+          BV   33                              31              33            
+          RS    1.750000E-03     .1              .1             2.900000E-03 
+          TT    2.000000E-09                                    2.000000E-09 
+         CJO    2.800000E-09   35.000000E-12  340.000000E-12    1.175000E-09 
+          VJ     .8              .4              .5              .9          
+           M     .53                             .9              .545        
+         XTI    2.8                                             3.5          
+        TRS1    3.000000E-03                                    4.200000E-03 
+
+
+               X_X2.DDx        X_X2.DD         
+  T_Measured   27              27            
+   T_Current   27              27            
+          IS    1.000000E-12  100.000000E-15 
+          BV                   31            
+          RS     .1             1            
+         CJO   25.000000E-12  128.000000E-12 
+          VJ     .4              .4          
+           M     .8              .84         
+
+
+**** 09/05/22 23:06:25 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Testbench-trans"  [ c:\users\mypc\desktop\solar_kit\simulations\mos_heat_test2\mos_heat_test-pspicefiles\testbench\tran
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.NMOS       X_X1.PMOSd      X_X2.NMOS       X_X2.PMOSd      
+               NMOS            PMOS            NMOS            PMOS            
+  T_Measured   27              27              27              27            
+   T_Current   27              27              27              27            
+       LEVEL    7               1               7               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO     .7             -.3              .7            -1.5          
+          KP   62.784430E-06   62.784430E-06   62.784430E-06   62.784430E-06 
+       GAMMA    0               5.506042        0               9.536744     
+         PHI                     .933651                         .990481     
+      LAMBDA    0               0               0               0            
+          IS    1.000000E-15   60.000000E-15    1.000000E-15   60.000000E-15 
+          JS    0               0               0               0            
+          PB    1                .8             1                .8          
+        PBSW    1                .8             1                .8          
+          CJ    1.000000E-18    1.000000E-18    1.000000E-18    1.000000E-18 
+        CJSW    1.000000E-18    1.000000E-18    1.000000E-18    1.000000E-18 
+        CGSO  202.000000E-12    1.000000E-18  254.000000E-12    1.000000E-18 
+        CGDO   20.000000E-12    1.000000E-18   24.000000E-12    1.000000E-18 
+        CGBO    0               1.000000E-18    0               1.000000E-18 
+        NSUB   10.000000E+15    1.000000E+18   10.000000E+15    3.000000E+18 
+         TOX   33.000000E-09   33.000000E-09   33.000000E-09   33.000000E-09 
+          XJ  400.000000E-09    0             300.000000E-09    0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03   10.000000E+03 
+       DELTA     .03                             .025                        
+      DIOMOD    2               1               2               1            
+         VFB   -1               0              -1               0            
+        LETA    0               0               0               0            
+        WETA    0               0               0               0            
+          U0     .067           0                .067           0            
+        TEMP                    0                               0            
+         VDD                    5                               5            
+       XPART    0               0               0               0            
+         NLX  178.000000E-09                  178.000000E-09                 
+        DVT0    2.5                                                          
+        DVT1     .62                                                         
+          UA    2.100000E-09                  650.000000E-12                 
+          UB    3.800000E-18                    3.000000E-18                 
+          UC  -46.500000E-12                  -46.500000E-12                 
+        VSAT   80.000000E+03                   80.000000E+03                 
+        RDSW    0                               0                            
+        VOFF    -.23                            -.16                         
+     NFACTOR    1.5                             1.7                          
+      PDIBL1     .08                            1.000000E-03                 
+      PDIBL2     .025                            .015                        
+       DROUT     .8                              .7                          
+      PSCBE1  600.000000E+06                  600.000000E+06                 
+      PSCBE2  100.000000E-09                   10.000000E-09                 
+          A0    1.2                             1.38                         
+          A1    0                               0                            
+          A2     .9                              .84                         
+       NPEAK  124.200000E+15                  124.500000E+15                 
+         VBM   -5                              -5                            
+         LDD    0                               0                            
+        LITL  198.997500E-09                  172.336900E-09                 
+         KT1    -.88                            -.81                         
+         UA1    2.000000E-09                    1.500000E-09                 
+         UB1   -2.000000E-18                   -1.200000E-18                 
+         UC1  -56.000000E-12                  -56.000000E-12                 
+        ETA0     .045                            .045                        
+        KT1L    1.000000E-15                    1.000000E-15                 
+        DVT2    -.033                                                        
+        DSUB    1.1                             1                            
+      MOBMOD    1                               1                            
+        PRWG    0                               0                            
+        LINT   45.000000E-09                   45.000000E-09                 
+         DLC   45.000000E-09                   45.000000E-09                 
+         DWC    0                               0                            
+          CF    0                               0                            
+        NOIA  100.000000E+18                  100.000000E+18                 
+        NOIB   50.000000E+03                   50.000000E+03                 
+        NOIC   -1.400000E-12                   -1.400000E-12                 
+         VTM     .025864                         .025864                     
+     VERSION    3.2                             3.2                          
+       PBSWG    1                               1                            
+       MJSWG     .33                             .33                         
+       CJSWG    1.000000E-18                    1.000000E-18                 
+       JTSCD    0                               0                            
+        TOXM   33.000000E-09                   33.000000E-09                 
+         LLC    0                               0                            
+         LWC    0                               0                            
+        LWLC    0                               0                            
+         WLC    0                               0                            
+         WWC    0                               0                            
+        WWLC    0                               0                            
+
+
+**** 09/05/22 23:06:25 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Testbench-trans"  [ c:\users\mypc\desktop\solar_kit\simulations\mos_heat_test2\mos_heat_test-pspicefiles\testbench\tran
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.RTEMP      X_X2.RTEMP      
+           R    1               1            
+         TC1    4.000000E-03    3.200000E-03 
+         TC2    8.500000E-06    7.200000E-06 
+
+
+**** 09/05/22 23:06:25 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Testbench-trans"  [ c:\users\mypc\desktop\solar_kit\simulations\mos_heat_test2\mos_heat_test-pspicefiles\testbench\tran
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   HB)   24.0000  (   HI)   12.0000  (   HO)   23.9990  (   LI)    0.0000      
+
+(   LO) 90.50E-12  ( VMID)   11.7510  ( VMOS)   12.0000  ( VOUT)   11.7510      
+
+(VHI-G)   23.9750  (VLO-G) 1.262E-09  (X_X1.4)   11.7510 (X_X1.5) 1.262E-09     
+
+(X_X1.6)-1.689E-15 (X_X1.7)   11.7510 (X_X1.8) 591.5E-15 (X_X1.9) 592.2E-15     
+
+(X_X2.4)   12.0000 (X_X2.5)   23.9750 (X_X2.6)   11.7510 (X_X2.7)   11.9790     
+
+(X_X2.8)   11.7690 (X_X2.9)   11.7710 (X_U1.LS)    1.0000                       
+
+(X_X1.10)   11.7510                   (X_X1.11) 1.262E-09                       
+
+(X_X1.12) 598.4E-15                   (X_X1.13) 591.5E-15                       
+
+(X_X1.14)     .1232                   (X_X1.20)    4.2100                       
+
+(X_X2.10)   11.8530                   (X_X2.11)   23.9750                       
+
+(X_X2.12)   11.7970                   (X_X2.13)   11.7690                       
+
+(X_X2.14)   11.9760                   (X_X2.20)   11.8470                       
+
+(X_U1.L11)    1.0000                  (N14123204)   11.7510                     
+
+(X_U1.vinH)    1.0000                 (X_U1.vinL)    0.0000                     
+
+(N141181360)   12.0000                (N141211981)   11.7510                    
+
+(X_U1.Node3)    0.0000                (X_U1.NODE4)    0.0000                    
+
+(X_U1.UVLOH)   23.9990                (X_U1.UVLOL)   23.9990                    
+
+(X_U1.N14832) 90.50E-12               (X_U1.N15385) 90.50E-12                   
+
+(X_U1.N17250)   -5.0000               (X_U1.N37088)    1.0000                   
+
+(X_U1.N67080)    0.0000               (X_U1.N67749)   28.9990                   
+
+(X_U1.N67801)   23.9990               (X_U1.N67871)   23.9990                   
+
+(X_U1.NODE30)    1.0000               (X_U1.node40)   12.4800                   
+
+(X_U1.X_U1.3)    0.0000               (X_U1.X_U2.3)    1.0000               
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         0.000E+00
+    V_V1        -1.840E-03
+    V_V3        -6.000E-05
+    V_V4        -2.938E+01
+
+    TOTAL POWER DISSIPATION   3.53E+02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/05/22 23:06:25 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Testbench-trans"  [ c:\users\mypc\desktop\solar_kit\simulations\mos_heat_test2\mos_heat_test-pspicefiles\testbench\tran
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =      203.72
+  Total job time (using Solver 1)   =        1.83
+

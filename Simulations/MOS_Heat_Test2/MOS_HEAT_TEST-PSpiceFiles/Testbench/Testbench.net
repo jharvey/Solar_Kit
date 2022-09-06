@@ -1,0 +1,25 @@
+* source MOS_HEAT_TEST
+C_CloadHO         0 HO  0.1u  
+V_V2         LI 0 DC 0 AC 1
++PULSE 0 12 1n 2.5n 2.5n 10u 25u
+C_CloadLO         0 LO  0.1u  
+V_V1         HB 0 24
+X_U1         HB HB HO 0 HI LI 0 LO UCC27200
+V_V3         HI 0 DC 0 AC 0
++PULSE 12 0 1n 2.5n 2.5n 10u 25u
+V_V4         N141181360 0 12
+R_R2         0 VOUT  .4 TC=0,0 
+X_X1         VMID VLO-G 0 CSD17510Q5A
+X_X2         VMOS VHI-G VMID CSD17507Q5A
+L_L1         N14123204 VOUT  64uH  
+C_C1         0 N141211981  470u  TC=0,0 
+R_R3         N141211981 VOUT  1u TC=0,0 
+R_R4         N14123204 VMID  1u TC=0,0 
+R_R5         VMOS N141181360  1u TC=0,0 
+R_R6         VHI-G HO  100 TC=0,0 
+D_D1         VHI-G HO Dbreak 
+R_R7         0 VHI-G  100k TC=0,0 
+R_R8         VLO-G LO  100 TC=0,0 
+D_D2         VLO-G LO Dbreak 
+R_R9         0 VLO-G  100k TC=0,0 
+C_C2         VMID HB  10u  TC=0,0 
